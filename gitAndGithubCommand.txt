@@ -1,0 +1,61 @@
+Show present directory: pwd
+Move directory: cd directory name
+Back previous directory: cd ../
+Folder create: mkdir folder-name
+git initialization: git init
+File creation in a folder: touch file name (i.e. one.txt,a.php)
+git stage: git status(Shows the current state of the working directory and staging area.)
+
+Configuration user name and email: git config --global user.name "Your Name"
+git config --global user.email "your-email@example.com"
+Show configuration : git config --list
+
+from working directory to staging area: git add .(All file will be moved in staging area)
+Individual file:git add filename
+
+git diff
+→ Shows differences between the working directory and the last commit.
+Restore : git restore filename (When some are added in a file but its not reach the staging area).
+
+staged to unstaged : git rm --cached filename
+
+From Staging area to local repositoy : git commit -m "message"
+Show medium History : git log // Fixed : git log commit id
+show oneline History : git log --oneline //Fixed : git log commit id --oneline
+show full story : git show
+show fixed commit : git show commit id
+From working directory to staging area and staging area to local repository : git add . && git commit -m "message"
+From local repository to staging area : git reset --soft HEAD^(1 step back)
+From Local repository to Working directory : git reset HEAD^(2 step back)
+From local repository to remove : git reset --hard HEAD^(3 step back)
+
+For Undo : git checkout commit id(previous)
+Go back : git checkout master
+
+Connect Local repository to remote repository : git remote add origin <remote url>
+Check connection Local repository to remote repository : git remote or git remote -v
+Move a repository remote(github) to local : git clone <remote url>
+Remove a folder : rm -rf <folder name>
+
+PUSH a Project in github-
+	1.Make a Folder and all files have to be included in this folder.
+	2.git init
+	3.git add .
+	4.git commit -m"First Commit"
+	5.git branch -M main
+	6.git remote add origin <remote url>
+	7.git push -u origin main
+
+From remote repository update to Local repository : git pull
+
+Branching and Merging:
+	Show branch : git branch
+	Create branch : git <branch name>
+	Move branch : git checkout <branch name>
+	Delete branch : git branch -d <branch name>
+	Push a code in secondary branch : git push -u origin <secondary branch name>
+	Merge main branch : At first we will go main branch and then 
+			    git merge <secondary branch name> and then push 
+			    main branch git push -u origin <main branch>
+			    
+	
